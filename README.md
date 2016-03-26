@@ -73,6 +73,11 @@ Linux: [![Circle CI](https://circleci.com/gh/conda-forge/xarray-feedstock.svg?st
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/xarray-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/xarray-feedstock) 
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/xarray-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/xarray-feedstock/branch/master)
 
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/xarray/badges/version.svg)](https://anaconda.org/conda-forge/xarray)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/xarray/badges/downloads.svg)](https://anaconda.org/conda-forge/xarray)
+
 
 Updating xarray-feedstock
 =========================
