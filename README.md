@@ -5,7 +5,7 @@ Home: https://github.com/pydata/xarray
 
 Package license: Apache Software License
 
-Feedstock license: BSD
+Feedstock license: BSD 3-Clause
 
 Summary: N-D labeled arrays and datasets in Python
 
@@ -69,6 +69,7 @@ Terminology
 
 Current build status
 ====================
+
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/xarray-feedstock.svg?style=svg)](https://circleci.com/gh/conda-forge/xarray-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/xarray-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/xarray-feedstock) 
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/xarray-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/xarray-feedstock/branch/master)
