@@ -6,11 +6,11 @@ package:
 
 source:
     fn: xarray-{{ version }}.tar.gz
-    url: https://pypi.python.org/packages/source/x/xarray/xarray-{{ version }}.tar.gz
-    md5: 0d87147887d0ab0263ab9a1626f3e1e4
+    url: https://github.com/pydata/xarray/archive/v{{ version }}.tar.gz
+    sha256: 9648ea1aed55b604f2fed85228e7cead3c3c7d514aa7a01514cc3de0290f9bfc
 
 build:
-    number: 0
+    number: 1
     script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -27,7 +27,6 @@ requirements:
         - dask >=0.6
         - h5netcdf
         - cyordereddict
-        - pynio  # [not py3k and not win]
 
 test:
     imports:
