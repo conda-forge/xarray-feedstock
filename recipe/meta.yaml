@@ -1,4 +1,4 @@
-{% set version = "0.7.2" %}
+{% set version = "0.8.0" %}
 
 package:
     name: xarray
@@ -7,10 +7,10 @@ package:
 source:
     fn: xarray-{{ version }}.tar.gz
     url: https://github.com/pydata/xarray/archive/v{{ version }}.tar.gz
-    sha256: 9648ea1aed55b604f2fed85228e7cead3c3c7d514aa7a01514cc3de0290f9bfc
+    sha256: 2574e671e192faa7a32c897434dfab012b338d7a7fe55f8b0a56bc70e92d553b
 
 build:
-    number: 1
+    number: 0
     script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
