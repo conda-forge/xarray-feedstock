@@ -3,13 +3,25 @@ About xarray
 
 Home: https://github.com/pydata/xarray
 
-Package license: Apache Software License
+Package license: Apache-2.0
 
 Feedstock license: BSD 3-Clause
 
-Summary: N-D labeled arrays and datasets in Python
+Summary: N-D labeled arrays and datasets in Python.
 
 
+
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/xarray-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/xarray-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/xarray-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/xarray-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/xarray-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/xarray-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/xarray/badges/version.svg)](https://anaconda.org/conda-forge/xarray)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/xarray/badges/downloads.svg)](https://anaconda.org/conda-forge/xarray)
 
 Installing xarray
 =================
@@ -31,7 +43,6 @@ It is possible to list all of the versions of `xarray` available on your platfor
 ```
 conda search xarray --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -67,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/xarray-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/xarray-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/xarray-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/xarray-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/xarray-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/xarray-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/xarray/badges/version.svg)](https://anaconda.org/conda-forge/xarray)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/xarray/badges/downloads.svg)](https://anaconda.org/conda-forge/xarray)
 
 
 Updating xarray-feedstock
