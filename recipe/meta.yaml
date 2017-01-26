@@ -34,6 +34,10 @@ test:
     - xarray.backends
     - xarray.core
     - xarray.tests
+  requires:
+    - pytest
+  commands:
+    - pytest xarray -v
 
 about:
   home: https://github.com/pydata/xarray
