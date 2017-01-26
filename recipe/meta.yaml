@@ -37,7 +37,7 @@ test:
   requires:
     - pytest
   commands:
-    - pytest xarray -v
+    - pytest --pyargs xarray -v
 
 about:
   home: https://github.com/pydata/xarray
