@@ -19,7 +19,7 @@ requirements:
     - setuptools
   run:
     - python
-    - numpy
+    - numpy x.x
     - pandas
     - netcdf4
     - scipy
