@@ -32,8 +32,6 @@ test:
   imports:
     - xarray
     - xarray.backends
-    - xarray.core
-    - xarray.tests
   requires:
     - pytest
 
