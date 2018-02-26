@@ -1,4 +1,4 @@
-{% set version = "0.10.0" %}
+{% set version = "0.10.1" %}
 
 package:
   name: xarray
@@ -6,12 +6,12 @@ package:
 
 source:
   fn: xarray-{{ version }}.tar.gz
-  url: https://github.com/pydata/xarray/archive/v{{ version }}.tar.gz
-  sha256: 9191838f82467b3e2cc11670f6573202548ac9562d6d3abba6bcba34fc1b66f0
+  url: https://pypi.io/packages/source/n/xarray/xarray-{{ version }}.tar.gz
+  sha256: cc183c2d7b1788cdaeb895102b1b6c2b6a3544182ff714e92f404c29db93cc9d
 
 build:
-  number: 1
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  number: 0
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
@@ -19,12 +19,12 @@ requirements:
     - setuptools
   run:
     - python
-    - numpy
-    - pandas
+    - numpy >=1.11
+    - pandas >=0.18
     - netcdf4
     - scipy
     - bottleneck
-    - dask >=0.6
+    - dask >=0.9
     - h5netcdf
     - cyordereddict  # [not py>=35]
 
