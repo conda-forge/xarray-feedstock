@@ -5,8 +5,7 @@ package:
   version: {{ version }}
 
 source:
-  fn: xarray-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/n/xarray/xarray-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/x/xarray/xarray-{{ version }}.tar.gz
   sha256: cc183c2d7b1788cdaeb895102b1b6c2b6a3544182ff714e92f404c29db93cc9d
 
 build:
@@ -16,7 +15,7 @@ build:
 requirements:
   build:
     - python
-    - setuptools
+    - pip
   run:
     - python
     - numpy >=1.11
