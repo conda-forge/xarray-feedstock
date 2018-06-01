@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/x/xarray/xarray-{{ version }}.tar.gz
-  sha256: 5db71f0dff4348505ef9d7322068065ae0b8bdaa6fa31923cc87c15ff1166d99
+  sha256: 24d6eb9c89ee67aa9b15b14c13aff32a7a4b03e29a2ea74680131342e4543ee5
 
 build:
   number: 0
