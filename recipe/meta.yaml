@@ -9,7 +9,7 @@ source:
   sha256: 6a1f2c5dc5f639f8343f70ed08d0afbb477a3867298ef38f0d9bf4aafa0fb750
 
 build:
-  number: 0
+  number: 1
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
@@ -20,12 +20,6 @@ requirements:
     - python
     - numpy >=1.11
     - pandas >=0.18
-    - netcdf4
-    - scipy
-    - bottleneck
-    - dask >=0.9
-    - h5netcdf
-    - cyordereddict  # [not py>=35]
 
 test:
   imports:
