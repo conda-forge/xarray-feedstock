@@ -16,6 +16,7 @@ requirements:
   build:
     - python
     - pip
+    - pytest-runner
   run:
     - python
     - numpy >=1.12
