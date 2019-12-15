@@ -10,7 +10,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
@@ -21,6 +21,7 @@ requirements:
     - python >=3.6
     - numpy >=1.14
     - pandas >=0.24
+    - setuptools
 
 test:
   imports:
