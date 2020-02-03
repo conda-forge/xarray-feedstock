@@ -21,8 +21,8 @@ requirements:
 
   run:
     - python >=3.6
-    - numpy >=1.14
-    - pandas >=0.24
+    - numpy >=1.15
+    - pandas >=0.25
     - setuptools
 
 test:
