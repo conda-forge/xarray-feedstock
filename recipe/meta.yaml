@@ -1,4 +1,4 @@
-{% set version = "0.15.0" %}
+{% set version = "0.15.1" %}
 
 package:
   name: xarray
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/x/xarray/xarray-{{ version }}.tar.gz
-  sha256: c72d160c970725201f769e80fb91cbad68d6ebf21d68fcc371385a6c950459c3
+  sha256: 64e3138d87b641e22fe7a003c94abc685896b247b63e434505c1e6b38c91a8fb
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
@@ -36,7 +36,7 @@ about:
   home: https://github.com/pydata/xarray
   license: Apache-2.0
   license_file: LICENSE
-  summary: 'N-D labeled arrays and datasets in Python.'
+  summary: N-D labeled arrays and datasets in Python.
 
 extra:
   recipe-maintainers:
