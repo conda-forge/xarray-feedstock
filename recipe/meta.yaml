@@ -1,4 +1,4 @@
-{% set version = "0.16.0" %}
+{% set version = "0.16.1" %}
 
 package:
   name: xarray
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/x/xarray/xarray-{{ version }}.tar.gz
-  sha256: 665de4253fcf951e7a6954313b77164d7efca2bd820f0a518b7c25ea46ee43cb
+  sha256: 5e1af056ff834bf62ca57da917159328fab21b1f8c25284f92083016bb2d92a5
 
 build:
   noarch: python
