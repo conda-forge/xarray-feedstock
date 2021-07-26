@@ -10,17 +10,17 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
     - setuptools_scm
 
   run:
-    - python >=3.6
+    - python >=3.7
     - numpy >=1.17
     - pandas >=0.25
     - setuptools
