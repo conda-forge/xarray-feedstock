@@ -10,7 +10,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -21,10 +21,8 @@ requirements:
 
   run:
     - python >=3.8
-    - numpy >=1.18
-    - pandas >=1.1
-    - importlib_metadata
-    - typing_extensions >=3.7
+    - numpy >=1.19
+    - pandas >=1.2
     - packaging >=20.0
 
 test:
