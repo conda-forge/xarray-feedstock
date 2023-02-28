@@ -25,6 +25,28 @@ requirements:
     - numpy >=1.21
     - pandas >=1.4
     - packaging >=21.3
+  run_constrained:
+    - bottleneck >=1.3
+    - cartopy >=0.20
+    - cftime >=1.5
+    - dask-core >=2022.1
+    - distributed >=2022.1
+    - flox >=0.5
+    - h5netcdf >=0.13
+    - h5py >=3.6
+    - hdf5 >=1.12
+    - iris >=3.1
+    - matplotlib-base >=3.5
+    - nc-time-axis >=1.4
+    - netcdf4 >=1.5.7
+    - numba >=0.55
+    - pint >=0.18
+    - rasterio >=1.2
+    - scipy >=1.7
+    - seaborn >=0.11
+    - sparse >=0.13
+    - toolz >=0.11
+    - zarr >=2.10
 
 test:
   imports:
