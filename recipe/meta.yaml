@@ -1,5 +1,5 @@
 {% set name = "xarray" %}
-{% set version = "2023.7.0" %}
+{% set version = "2023.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/xarray-{{ version }}.tar.gz
-  sha256: dace2fdbf1b7ff185d9c1226a24bf83c2ae52f3253dbfe80e17d1162600d055c
+  sha256: 825c6d64202a731a4e49321edd1e9dfabf4be06802f1b8c8a3c00a3ebfc8cedf
 
 build:
   noarch: python
@@ -22,9 +22,30 @@ requirements:
     - pip
   run:
     - python >=3.9
-    - numpy >=1.21
+    - numpy >=1.22
     - pandas >=1.4
     - packaging >=21.3
+  run_constrained:
+    - bottleneck >=1.3
+    - cartopy >=0.20
+    - cftime >=1.6
+    - dask-core >=2022.7
+    - distributed >=2022.7
+    - flox >=0.5
+    - h5netcdf >=1.0
+    - h5py >=3.6
+    - hdf5 >=1.12
+    - iris >=3.2
+    - matplotlib-base >=3.5
+    - nc-time-axis >=1.4
+    - netcdf4 >=1.6.0
+    - numba >=0.55
+    - pint >=0.19
+    - scipy >=1.8
+    - seaborn >=0.11
+    - sparse >=0.13
+    - toolz >=0.12
+    - zarr >=2.12
 
 test:
   imports:
