@@ -1,5 +1,5 @@
 {% set name = "xarray" %}
-{% set version = "2023.8.0" %}
+{% set version = "2023.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/xarray-{{ version }}.tar.gz
-  sha256: 825c6d64202a731a4e49321edd1e9dfabf4be06802f1b8c8a3c00a3ebfc8cedf
+  sha256: 271955c05dc626dad37791a7807d920aaf9c64cac71d03b45ec7e402cc646603
 
 build:
   noarch: python
@@ -22,7 +22,7 @@ requirements:
     - pip
   run:
     - python >=3.9
-    - numpy >=1.22
+    - numpy >=1.21
     - pandas >=1.4
     - packaging >=21.3
   run_constrained:
