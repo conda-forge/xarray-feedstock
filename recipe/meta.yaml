@@ -27,25 +27,25 @@ requirements:
     - packaging >=23.1
   run_constrained:
     - bottleneck >=1.3
-    - cartopy >=0.20
+    - cartopy >=0.21
     - cftime >=1.6
-    - dask-core >=2022.7
-    - distributed >=2022.7
-    - flox >=0.5
-    - h5netcdf >=1.0
-    - h5py >=3.6
+    - dask-core >=2023.4
+    - distributed >=2023.4
+    - flox >=0.7
+    - h5netcdf >=1.1
+    - h5py >=3.8
     - hdf5 >=1.12
-    - iris >=3.2
-    - matplotlib-base >=3.5
+    - iris >=3.4
+    - matplotlib-base >=3.7
     - nc-time-axis >=1.4
     - netcdf4 >=1.6.0
-    - numba >=0.55
-    - pint >=0.19
-    - scipy >=1.8
-    - seaborn >=0.11
-    - sparse >=0.13
+    - numba >=0.56
+    - pint >=0.22
+    - scipy >=1.10
+    - seaborn >=0.12
+    - sparse >=0.14
     - toolz >=0.12
-    - zarr >=2.12
+    - zarr >=2.14
 
 test:
   imports:
