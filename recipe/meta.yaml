@@ -1,8 +1,12 @@
 {% set name = "xarray" %}
 {% set version = "2024.7.0" %}
+{% set min_python = "python >=3.9" %}
+
+# handle undefined PYTHON in `noarch: generic` outputs
+{% if PYTHON is not defined %}{% set PYTHON = "$PYTHON" %}{% endif %}
 
 package:
-  name: {{ name|lower }}
+  name: xarray-suite
   version: {{ version }}
 
 source:
@@ -11,50 +15,80 @@ source:
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
-requirements:
-  host:
-    - python >=3.9
-    - setuptools >=42
-    - setuptools-scm >=7
-    - pip
-  run:
-    - python >=3.9
-    - numpy >=1.23
-    - pandas >=2.0
-    - packaging >=23.1
-  run_constrained:
-    - bottleneck >=1.3
-    - cartopy >=0.21
-    - cftime >=1.6
-    - dask-core >=2023.4
-    - distributed >=2023.4
-    - flox >=0.7
-    - h5netcdf >=1.1
-    - h5py >=3.8
-    - hdf5 >=1.12
-    - iris >=3.4
-    - matplotlib-base >=3.7
-    - nc-time-axis >=1.4
-    - netcdf4 >=1.6.0
-    - numba >=0.56
-    - pint >=0.22
-    - scipy >=1.10
-    - seaborn >=0.12
-    - sparse >=0.14
-    - toolz >=0.12
-    - zarr >=2.14
-
-test:
-  imports:
-    - xarray
-    - xarray.backends
-  requires:
-    - pip
-  commands:
-    - pip check
+outputs:
+  - name: xarray-core
+    build:
+      noarch: generic
+      script: {{ PYTHON }} -m pip install . -vv
+    requirements:
+      host:
+        - {{ min_python }}
+        - setuptools >=42
+        - setuptools-scm >=7
+        - pip
+      run:
+        - {{ min_python }}
+        - numpy >=1.23
+        - packaging >=23.1
+        - pandas >=2.0
+    test:
+      imports:
+        - xarray
+      requires:
+        - pip
+      commands:
+        - pip check
+  - name: xarray
+    build:
+      noarch: generic
+    requirements:
+      host:
+        - {{ min_python }}
+        - setuptools >=42
+        - setuptools-scm >=7
+        - pip
+      run:
+        - {{ min_python }}
+        - {{ pin_subpackage("xarray-core", max_pin="x.x.x") }}
+        # accel
+        - flox >=0.7
+        - opt_einsum
+        - numbagg
+        # io & cloud
+        - fsspec
+        - netcdf4 >=1.6.0
+        - zarr >=2.14
+        # plotting
+        - matplotlib-base >=3.7
+        # misc
+        - pooch
+      run_constrained:
+        - bottleneck >=1.3
+        - cartopy >=0.21
+        - cftime >=1.6
+        - dask-core >=2023.4
+        - distributed >=2023.4
+        - h5netcdf >=1.1
+        - h5py >=3.8
+        - hdf5 >=1.12
+        - iris >=3.4
+        - nc-time-axis >=1.4
+        - numba >=0.56
+        - pint >=0.22
+        - scipy >=1.10
+        - seaborn >=0.12
+        - sparse >=0.14
+        - toolz >=0.12
+    test:
+      imports:
+        - xarray
+        - xarray.backends
+      requires:
+        - pip
+      commands:
+        - pip check
 
 about:
   home: https://github.com/pydata/xarray
