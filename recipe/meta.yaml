@@ -21,6 +21,7 @@ outputs:
   - name: xarray-core
     build:
       noarch: generic
+      script: {{ PYTHON }} -m pip install . -vv
     requirements:
       host:
         - {{ min_python }}
@@ -50,7 +51,7 @@ outputs:
         - pip
       run:
         - {{ min_python }}
-        - {{ pin_subpackage("xarray-core", exact=True) }}
+        - {{ pin_subpackage("xarray-core", max_pin="x.x.x") }}
         # accel
         - flox >=0.7
         - opt_einsum
