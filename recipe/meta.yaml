@@ -27,13 +27,13 @@ outputs:
         - numpy >=1.23
         - packaging >=23.1
         - pandas >=2.0
-      test:
-        imports:
-          - xarray
-        requires:
-          - pip
-        commands:
-          - pip check
+    test:
+      imports:
+        - xarray
+      requires:
+        - pip
+      commands:
+        - pip check
   - name: {{ name }}
     requirements:
       host:
