@@ -2,8 +2,11 @@
 {% set version = "2024.7.0" %}
 {% set min_python = "python >=3.9" %}
 
+# handle undefined PYTHON in `noarch: generic` outputs
+{% if PYTHON is not defined %}{% set PYTHON = "$PYTHON" %}{% endif %}
+
 package:
-  name: {{ name|lower }}
+  name: xarray-suite
   version: {{ version }}
 
 source:
@@ -15,10 +18,9 @@ build:
   number: 1
 
 outputs:
-  - name: {{ name }}-core
+  - name: xarray-core
     build:
-      noarch: python
-      script: {{ PYTHON }} -m pip install . -vv
+      noarch: generic
     requirements:
       host:
         - {{ min_python }}
@@ -37,7 +39,9 @@ outputs:
         - pip
       commands:
         - pip check
-  - name: {{ name }}
+  - name: xarray
+    build:
+      noarch: generic
     requirements:
       host:
         - {{ min_python }}
