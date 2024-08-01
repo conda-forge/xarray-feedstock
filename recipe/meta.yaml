@@ -1,5 +1,6 @@
 {% set name = "xarray" %}
 {% set version = "2024.7.0" %}
+{% set min_python = "python >=3.9" %}
 
 package:
   name: {{ name|lower }}
@@ -11,19 +12,21 @@ source:
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
   number: 1
 
 outputs:
   - name: {{ name }}-core
+    build:
+      noarch: python
+      script: {{ PYTHON }} -m pip install . -vv
     requirements:
       host:
-        - python >=3.9
+        - {{ min_python }}
         - setuptools >=42
         - setuptools-scm >=7
         - pip
       run:
-        - python >=3.9
+        - {{ min_python }}
         - numpy >=1.23
         - packaging >=23.1
         - pandas >=2.0
@@ -37,13 +40,13 @@ outputs:
   - name: {{ name }}
     requirements:
       host:
-        - python >=3.9
+        - {{ min_python }}
         - setuptools >=42
         - setuptools-scm >=7
         - pip
       run:
-        - python >=3.9
-        - {{ pin_subpackage('xarray-core', max_pin="x.x.x") }}
+        - {{ min_python }}
+        - {{ pin_subpackage("xarray-core", exact=True) }}
         # accel
         - flox >=0.7
         - opt_einsum
