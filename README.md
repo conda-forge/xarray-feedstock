@@ -147,6 +147,7 @@ Feedstock Maintainers
 * [@dcherian](https://github.com/dcherian/)
 * [@jhamman](https://github.com/jhamman/)
 * [@keewis](https://github.com/keewis/)
+* [@kmuehlbauer](https://github.com/kmuehlbauer/)
 * [@ocefpaf](https://github.com/ocefpaf/)
 * [@shoyer](https://github.com/shoyer/)
 
