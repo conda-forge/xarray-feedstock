@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -42,7 +42,7 @@ requirements:
     - numba >=0.57
     - pint >=0.22
     - scipy >=1.11
-    - seaborn >=0.12
+    - seaborn-base >=0.12
     - sparse >=0.14
     - toolz >=0.12
     - zarr >=2.16
