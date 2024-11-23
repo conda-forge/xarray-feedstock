@@ -53,6 +53,7 @@ test:
     - xarray
     - xarray.backends
   requires:
+    - python {{ python_min }}
     - pip
   commands:
     - pip check
