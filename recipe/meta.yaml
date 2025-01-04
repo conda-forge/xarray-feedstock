@@ -1,5 +1,5 @@
 {% set name = "xarray" %}
-{% set version = "2024.11.0" %}
+{% set version = "2025.1.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/xarray-{{ version }}.tar.gz
-  sha256: 1ccace44573ddb862e210ad3ec204210654d2c750bec11bbe7d842dfc298591f
+  sha256: e48fd44c918f127d553ec1c05faac1cadc9ab9402e210ecc440b64b0dfcfda4c
 
 build:
   noarch: python
