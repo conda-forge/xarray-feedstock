@@ -1,6 +1,6 @@
 {% set name = "xarray" %}
-{% set version = "2025.6.1" %}
-{% set python_min = "3.10" %}
+{% set version = "2025.7.0" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/xarray-{{ version }}.tar.gz
-  sha256: a84f3f07544634a130d7dc615ae44175419f4c77957a7255161ed99c69c7c8b0
+  sha256: fd83ac8d638e7caef9d7f0c82bcdf380cede29d2ff84575133b2b95164af78ee
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -23,30 +23,30 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - numpy >=1.24
-    - packaging >=23.2
-    - pandas >=2.1
+    - numpy >=1.26
+    - packaging >=24.1
+    - pandas >=2.2
   run_constrained:
-    - bottleneck >=1.3
-    - cartopy >=0.22
+    - bottleneck >=1.4
+    - cartopy >=0.23
     - cftime >=1.6
-    - dask-core >=2023.11
-    - distributed >=2023.11
-    - flox >=0.7
+    - dask-core >=2024.6
+    - distributed >=2024.6
+    - flox >=0.9
     - h5netcdf >=1.3
-    - h5py >=3.8
-    - hdf5 >=1.12
-    - iris >=3.7
+    - h5py >=3.11
+    - hdf5 >=1.14
+    - iris >=3.9
     - matplotlib-base >=3.8
     - nc-time-axis >=1.4
     - netcdf4 >=1.6.0
-    - numba >=0.57
-    - pint >=0.22
-    - scipy >=1.11
+    - numba >=0.60
+    - pint >=0.24
+    - scipy >=1.13
     - seaborn-base >=0.13
-    - sparse >=0.14
+    - sparse >=0.15
     - toolz >=0.12
-    - zarr >=2.16
+    - zarr >=2.18
 
 test:
   imports:
