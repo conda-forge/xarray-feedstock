@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: xarray
-  version: "2025.12.0"
+  version: "2026.1.0"
   python_min: "3.11"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/xarray-${{ version }}.tar.gz
-  sha256: 73f6a6fadccc69c4d45bdd70821a47c72de078a8a0313ff8b1e97cd54ac59fed
+  sha256: 0c9814761f9d9a9545df37292d3fda89f83201f3e02ae0f09f03313d9cfdd5e2
 
 build:
   number: 0
