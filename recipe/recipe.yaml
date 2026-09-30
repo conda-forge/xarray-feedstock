@@ -30,27 +30,29 @@ requirements:
     - pandas >=2.2
   run_constraints:
     - bottleneck >=1.4
-    - cartopy >=0.23
+    - cartopy >=0.24
     - cftime >=1.6
+    # dask[complete]
     - dask-core >=2024.6
     - distributed >=2024.6
-    - flox >=0.9
-    - h5netcdf >=1.3
+    - flox >=0.10
+    # h5netcdf[h5py]
+    - h5netcdf >=1.8.0
     - h5py >=3.11
     - hdf5 >=1.14
     - iris >=3.9
-    - matplotlib-base >=3.8
+    - matplotlib-base >=3.10
     - nc-time-axis >=1.4
     - netcdf4 >=1.6.0
-    - numba >=0.60
-    - numbagg >=0.8
+    - numba >=0.62
+    - numbagg >=0.9,!=0.9.5
     - pint >=0.24
     - pydap >=3.5.0
-    - scipy >=1.13
+    - scipy >=1.15
     - seaborn-base >=0.13
     - sparse >=0.15
     - toolz >=0.12
-    - zarr >=2.18
+    - zarr >=3.0
 
 tests:
   - python:
